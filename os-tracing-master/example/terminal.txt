@@ -1,0 +1,514 @@
+
+oslab@oslab-VMware-Virtual-Platform:~/embassy/examples/std$ gdb target/debug/tick 
+GNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from target/debug/tick...
+warning: Missing auto-load script at offset 0 in section .debug_gdb_scripts
+of file /home/oslab/embassy/examples/std/target/debug/tick.
+Use `info auto-load python-scripts [REGEXP]' to list them.
+(gdb) source async.py 
+Breakpoint 1 at 0x2e7bf5: file src/raw/mod.rs, line 177.
+Breakpoint 2 at 0x2e7cb5: file src/raw/mod.rs, line 443.
+Breakpoint 3 at 0x2e840e: file src/raw/mod.rs, line 444.
+Breakpoint 4 at 0x3fa51: file /home/oslab/embassy/embassy-executor/src/raw/mod.rs, line 220.
+Breakpoint 5 at 0x3fbf1: file /home/oslab/embassy/embassy-executor/src/raw/mod.rs, line 220.
+Breakpoint 6 at 0x2e7d25: file src/raw/mod.rs, line 553.
+Breakpoint 7 at 0x40854: file src/bin/tick.rs, line 17.
+Breakpoint 8 at 0x406d4: file src/bin/tick.rs, line 7.
+Breakpoint 9 at 0x40794: file src/bin/tick.rs, line 12.
+Breakpoint 10 at 0x2c3273: file src/timer.rs, line 180.
+(gdb) run
+Starting program: /home/oslab/embassy/examples/std/target/debug/tick 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) y
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 11 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 12 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 13 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Breakpoint 4, embassy_executor::raw::TaskStorage<tick::____embassy_main_task::{async_fn_env#0}>::poll<tick::____embassy_main_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 14 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 15 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 16 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 17 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 18 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+warning: Source file is more recent than executable.
+7           info!("before tick await");
+Temporary breakpoint 19 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:56:54.178688433Z INFO  tick] before tick await
+[New Thread 0x7ffff7bff6c0 (LWP 29858)]
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 20 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 21 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 22 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 23 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 24 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 25 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 26 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:01.201070413Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 27 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 28 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 29 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 30 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 31 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 32 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 33 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:57:05.234724597Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 34 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:57:05.245156185Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 35 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 36 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 37 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 38 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 39 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 40 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 41 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:12.277610006Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 42 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 43 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 44 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 45 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 46 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 47 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 48 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:57:16.290746212Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 49 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:57:16.293684439Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 50 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 51 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 52 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 53 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 54 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 55 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 56 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:23.305892370Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 57 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 58 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 59 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 60 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 61 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 62 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 63 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:57:27.325521491Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 64 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:57:27.333466189Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 65 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 66 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 67 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 68 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 69 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 70 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 71 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:34.347983472Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 72 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 73 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 74 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 75 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 76 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 77 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 78 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:57:38.363954526Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 79 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:57:38.373359659Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 80 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 81 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 82 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 83 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 84 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 85 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 86 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:45.385161132Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 87 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 88 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 89 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 90 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 91 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 92 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 93 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:57:49.410602821Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 94 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:57:49.414056728Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 95 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 96 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 97 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 98 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 99 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 100 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 101 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:57:56.436517711Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 102 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 103 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 104 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 105 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 106 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 107 at 0x555555592d20: file src/bin/tick.rs, line 26.
+
+Thread 1 "tick" hit Breakpoint 7, tick::after_tick () at src/bin/tick.rs:17
+17          info!("after tick await");
+Temporary breakpoint 108 at 0x555555592d44: file src/bin/tick.rs, line 27.
+[2025-04-25T12:58:00.448458297Z INFO  tick] after tick await
+
+Thread 1 "tick" hit Breakpoint 8, tick::before_tick () at src/bin/tick.rs:7
+7           info!("before tick await");
+Temporary breakpoint 109 at 0x555555592c97: file src/bin/tick.rs, line 23.
+[2025-04-25T12:58:00.453839881Z INFO  tick] before tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 110 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 6, embassy_executor::raw::Executor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:553
+553             self.inner.poll()
+Temporary breakpoint 111 at 0x5555555931a8: file /home/oslab/embassy/embassy-executor/src/arch/std.rs, line 61.
+
+Thread 1 "tick" hit Breakpoint 2, embassy_executor::raw::SyncExecutor::poll (self=0x7fffffffcd40) at src/raw/mod.rs:443
+443             self.run_queue.dequeue_all(|p| {
+Temporary breakpoint 112 at 0x55555583bd2a: file src/raw/mod.rs, line 554.
+
+Thread 1 "tick" hit Breakpoint 3, embassy_executor::raw::{impl#9}::poll::{closure#0} (p=...) at src/raw/mod.rs:444
+444                 let task = p.header();
+Temporary breakpoint 113 at 0x55555583ce34: file src/raw/run_queue_atomics.rs, line 85.
+
+Thread 1 "tick" hit Breakpoint 5, embassy_executor::raw::TaskStorage<tick::__run_task::{async_fn_env#0}>::poll<tick::__run_task::{async_fn_env#0}> (p=...)
+    at /home/oslab/embassy/embassy-executor/src/raw/mod.rs:220
+220             let this = &*p.as_ptr().cast::<TaskStorage<F>>();
+Temporary breakpoint 114 at 0x55555583c43c: file src/raw/mod.rs, line 454.
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 115 at 0x555555592dcd: file src/bin/tick.rs, line 24.
+
+Thread 1 "tick" hit Breakpoint 9, tick::mid_tick () at src/bin/tick.rs:12
+12          info!("mid tick await");
+Temporary breakpoint 116 at 0x555555592df1: file src/bin/tick.rs, line 25.
+[2025-04-25T12:58:07.471752674Z INFO  tick] mid tick await
+
+Thread 1 "tick" hit Breakpoint 10, embassy_time::timer::{impl#5}::poll (self=..., cx=0x7fffffffcb88) at src/timer.rs:180
+180             if self.yielded_once && self.expires_at <= Instant::now() {
+Temporary breakpoint 117 at 0x555555592d20: file src/bin/tick.rs, line 26.
+^C
+Thread 1 "tick" received signal SIGINT, Interrupt.
+Download failed: Invalid argument.  Continuing without source file ./misc/../sysdeps/unix/sysv/linux/x86_64/syscall.S.
+syscall () at ../sysdeps/unix/sysv/linux/x86_64/syscall.S:38
+warning: 38     ../sysdeps/unix/sysv/linux/x86_64/syscall.S: No such file or directory
+(gdb) dump_async_log 
+(gdb) 

@@ -1,0 +1,1077 @@
+{
+    "traceEvents": [
+        {
+            "ts": 1745987518.964896,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987518.9886043,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987518.9887671,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987518.988864,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987518.9904103,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987518.9947083,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987518.9981105,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h14cadb8bfe6eae70E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992495361"
+            }
+        },
+        {
+            "ts": 1745987519.001028,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987519.0018394,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h14cadb8bfe6eae70E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987519.002325,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987519.0028074,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987519.0032132,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        },
+        {
+            "ts": 1745987519.007731,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987519.0078537,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987519.0079367,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987519.0102687,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987519.0133035,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987519.016787,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992496193"
+            }
+        },
+        {
+            "ts": 1745987519.0201554,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_0_await_notify17h34fbba63c47846c7E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992499828"
+            }
+        },
+        {
+            "ts": 1745987519.021673,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_0_await_notify17h34fbba63c47846c7E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992490431"
+            }
+        },
+        {
+            "ts": 1745987519.037598,
+            "ph": "b",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282712,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987519.040915,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987519.0425384,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992490688"
+            },
+            "id": 93824996282712,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987519.0435383,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987519.0447853,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987519.0467842,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987519.0470402,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987519.047244,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987519.0496275,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h65bff4f863f50d59E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992495777"
+            }
+        },
+        {
+            "ts": 1745987519.0521545,
+            "ph": "b",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282632,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987519.054595,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987519.0557623,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489937"
+            },
+            "id": 93824996282632,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987519.0567763,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h65bff4f863f50d59E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987519.0576231,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987519.058321,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987519.0591679,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        },
+        {
+            "ts": 1745987521.0655115,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987521.0657659,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987521.0659888,
+            "ph": "B",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987521.0701296,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987521.070281,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987521.0703816,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987521.0750308,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987521.0783596,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987521.0829608,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992496193"
+            }
+        },
+        {
+            "ts": 1745987521.0886035,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282712,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987521.0899646,
+            "ph": "e",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992490688"
+            },
+            "id": 93824996282712,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987521.0925086,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_2_await_notify17h3ad761177088fa5bE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992500212"
+            }
+        },
+        {
+            "ts": 1745987521.0938919,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_2_await_notify17h3ad761177088fa5bE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489023"
+            }
+        },
+        {
+            "ts": 1745987521.0961432,
+            "ph": "b",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987521.0980096,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987521.0989966,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992488844"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987521.09993,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987521.1003983,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987521.1009126,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987521.101247,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        },
+        {
+            "ts": 1745987524.097377,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987524.097548,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987524.0976765,
+            "ph": "B",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987524.099815,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987524.1000133,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987524.1000955,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987524.1018977,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987524.105026,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987524.1131186,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992496193"
+            }
+        },
+        {
+            "ts": 1745987524.1151345,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987524.1161275,
+            "ph": "e",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992488844"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987524.1213963,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_1_await_notify17h821041ec48621411E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992500020"
+            }
+        },
+        {
+            "ts": 1745987524.122875,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN4tick20level_1_await_notify17h821041ec48621411E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489393"
+            }
+        },
+        {
+            "ts": 1745987524.1249986,
+            "ph": "b",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987524.127419,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987524.12855,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489526"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987524.129109,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987524.1295245,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987524.131426,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987524.1320527,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        },
+        {
+            "ts": 1745987526.054483,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987526.054675,
+            "ph": "E",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987526.0548184,
+            "ph": "B",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987526.0566807,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987526.0567884,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987526.0569022,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987526.0583696,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987526.0606947,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987526.0643842,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h65bff4f863f50d59E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992495777"
+            }
+        },
+        {
+            "ts": 1745987526.0752504,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282632,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987526.079342,
+            "ph": "e",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489937"
+            },
+            "id": 93824996282632,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987526.0807486,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17h65bff4f863f50d59E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987526.0814629,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987526.0821056,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987526.082805,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        },
+        {
+            "ts": 1745987529.1274686,
+            "ph": "B",
+            "pid": "13032",
+            "tid": " 13032",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995426311"
+            }
+        },
+        {
+            "ts": 1745987529.1304257,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987529.1306293,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN3std4sync6poison7condvar7Condvar10notify_one17h356f45651bc593beE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987529.130727,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283893"
+            }
+        },
+        {
+            "ts": 1745987529.134659,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283781"
+            }
+        },
+        {
+            "ts": 1745987529.1371524,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285662"
+            }
+        },
+        {
+            "ts": 1745987529.1402903,
+            "ph": "B",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992496193"
+            }
+        },
+        {
+            "ts": 1745987529.1512015,
+            "ph": "n",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995132713"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987529.153589,
+            "ph": "e",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN75_$LT$embassy_time..timer..Timer$u20$as$u20$core..future..future..Future$GT$4poll17h16e932b94c178e16E",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992489526"
+            },
+            "id": 93824996282720,
+            "cat": "async_poll"
+        },
+        {
+            "ts": 1745987529.1549509,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw20TaskStorage$LT$F$GT$4poll17he753c3371398b28aE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995285708"
+            }
+        },
+        {
+            "ts": 1745987529.1577733,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll28_$u7b$$u7b$closure$u7d$$u7d$17hdbef770c230599fcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995288260"
+            }
+        },
+        {
+            "ts": 1745987529.1586382,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw12SyncExecutor4poll17h77365628f175393cE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824995283898"
+            }
+        },
+        {
+            "ts": 1745987529.1601474,
+            "ph": "E",
+            "pid": "13029",
+            "tid": " 13029",
+            "name": "_ZN16embassy_executor3raw8Executor4poll17hf68ce5f2066dfcdcE",
+            "args": {
+                "Function address (For recognizing anonymous type)": "0x93824992492056"
+            }
+        }
+    ],
+    "displayTimeUnit": "ms"
+}

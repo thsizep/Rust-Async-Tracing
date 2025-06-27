@@ -1,0 +1,12 @@
+00000000002e9280 T embassy_executor::raw::poll_exited
+00000000002e9340 t embassy_executor::raw::SyncExecutor::poll
+00000000002e9a80 t embassy_executor::raw::SyncExecutor::poll::{{closure}}
+00000000000406f0 t embassy_executor::raw::TaskStorage<F>::poll
+0000000000040890 t embassy_executor::raw::TaskStorage<F>::poll
+0000000000040a30 t embassy_executor::raw::TaskStorage<F>::poll
+00000000002e93b0 T embassy_executor::raw::Executor::poll
+000000000030c000 T std::sync::poison::condvar::Condvar::notify_one
+0000000000041870 t tick::level_0_await_notify
+0000000000041930 t tick::level_1_await_notify
+00000000000419f0 t tick::level_2_await_notify
+00000000002c4510 T <embassy_time::timer::Timer as core::future::future::Future>::poll
